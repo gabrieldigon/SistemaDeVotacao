@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(255, 255, 255); /* Cor de fundo do aplicativo */
+  background-color: #17202A; /* Cor de fundo do aplicativo */
 }
 
 /* Estilo para o título principal */
@@ -52,8 +52,8 @@ h5 {
 /* (você pode personalizar conforme necessário) */
 .Button {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #17202A;
+  color: rgb(204, 204, 204);
   border: none;
   cursor: pointer;
 }
@@ -68,7 +68,7 @@ table {
 
 /* Estilo para o cabeçalho da tabela */
 thead th {
-  background-color: #007bff;
+  background-color: #17202A;
   color: #fff;
   padding: 10px;
   text-align: left;
@@ -87,7 +87,7 @@ td {
 /* Estilo para o botão "Botão" dentro da tabela */
 /* (você pode personalizar conforme necessário) */
 .btn-primary {
-  background-color: #007bff;
+  background-color: #17202A;
   color: #fff;
   padding: 5px 10px;
   border: none;

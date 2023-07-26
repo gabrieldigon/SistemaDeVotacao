@@ -31,8 +31,8 @@ function App() {
   return (
     <div className="App">
       <div style={{ textAlign: "center" }}>
-        <h1 style={{ fontSize: "48px", color: "#333", fontWeight: "bold" }}>Vote your word</h1>
-        <p style={{ fontSize: "18px", color: "#888" }}>
+        <h1 style={{ fontSize: "48px", color: "#ffffff", fontWeight: "bold" }}>Vote your word</h1>
+        <p style={{ fontSize: "18px", color: "#ffffff" }}>
           Vote your word permite que você escolha uma palavra e vote nela quantas vezes desejar para que ao fim do dia a sua palavra seja a grande campeã.
         </p>
       </div>

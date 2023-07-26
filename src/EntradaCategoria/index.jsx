@@ -30,10 +30,10 @@ export default function EntradaCategorias() {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <TextField
-        id="outlined-basic"
-        label="Novo Topico"
+        label="Sua palavra"
         variant="outlined"
-        style={{ width: "500px" }}
+        focused
+        style={{ width: "500px", color:"white" }}
         onChange={(e) => {
           SetName(e.target.value);
           }} 
