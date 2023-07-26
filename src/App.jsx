@@ -5,8 +5,6 @@ import ListagemProdutos from "./ListProdutos";
 import EntradaCategorias from "./EntradaCategoria";
 import EntradaProdutos from "./EntradaProduto";
 
-//https://dontpad.com/aulareactuea
-
 function App() {
   const [produtos, setProdutos] = useState([]);
   const [categorias, setCategorias] = useState([]);
@@ -32,18 +30,14 @@ function App() {
 
   return (
     <div className="App">
-      <h5>Bem Vindo {email}</h5>
-
+      <div style={{ textAlign: "center" }}>
+        <h1 style={{ fontSize: "48px", color: "#333", fontWeight: "bold" }}>Vote your word</h1>
+        <p style={{ fontSize: "18px", color: "#888" }}>
+          Vote your word permite que você escolha uma palavra e vote nela quantas vezes desejar para que ao fim do dia a sua palavra seja a grande campeã.
+        </p>
+      </div>
       <EntradaCategorias />
-{/* aq eu basicamente escondi o campo de input do produto */}
-      {/* {categorias.length > 0 ? (
-        <EntradaProdutos categorias={categorias} />
-      ) : (
-        "Loading..."
-      )} */}
-
       <ListagemProdutos categorias={categorias} />
-      {/* isso aq retorna produtos,preciso de uma que retorna catergorias */}
     </div>
   );
 }

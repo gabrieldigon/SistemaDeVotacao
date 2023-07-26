@@ -33,7 +33,7 @@ export default function EntradaCategorias() {
         id="outlined-basic"
         label="Novo Topico"
         variant="outlined"
-        fullWidth
+        style={{ width: "500px" }}
         onChange={(e) => {
           SetName(e.target.value);
           }} 
