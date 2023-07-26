@@ -27,6 +27,7 @@ export default function ListagemProdutos({ categorias }) {
             <tr key={produto._id} style={{ backgroundColor: "white" }}>
               <td style={{ display: "flex", justifyContent: "space-between", backgroundColor: "#17202A", border: "3px solid white"}}>
                 <span style={{ fontWeight: "bold", fontSize: "20px", color: "white" }}>{produto.name}</span>
+                <span style={{ fontWeight: "bold", fontSize: "20px", color: "white" }}>{produto.votes}</span>
                 <button
                   className="btn btn-primary"
                   style={{ borderRadius: "10px", backgroundColor: "white", color: "#17202A", fontWeight: "bold", borderColor: "#17202A" }}
