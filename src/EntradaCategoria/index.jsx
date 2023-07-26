@@ -1,12 +1,12 @@
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import { useState } from "react";
-import { TextField,Button } from "@mui/material";
+import { TextField, Button } from "@mui/material";
 
 export default function EntradaCategorias() {
-  const [name, SetName] = useState("");
-//aq é uma funcao de post que se conecta com o backEnd e cria uma categoria
+  const [name, setName] = useState("");
+
+  // Função de post que se conecta com o backEnd e cria uma categoria
   async function postCategoria() {
     try {
       const response = await fetch("http://localhost:8080/api/categories", {
@@ -19,31 +19,55 @@ export default function EntradaCategorias() {
 
       var textResult = await response.text();
       if (!response.ok) throw Error(textResult);
-      alert(textResult);
-      window.location.reload()
-
+      window.location.reload();
     } catch (error) {
       alert(error);
     }
   }
-//Aq pra baixo é a view
+
+  // Estilos personalizados
+  const textFieldStyle = {
+    "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+      borderColor: "white",
+    },
+    "& input": {
+      color: "white",
+    },
+  };
+
+  const buttonStyle = {
+    backgroundColor: "white",
+    color: "#17202A", // Alterando a cor do botão para "#17202A"
+    fontWeight: "bold", // Adicionando o negrito (bold) ao botão
+    marginLeft: "20px",
+  };
+
+  const buttonLabelStyle = {
+    color: "#17202A", // Alterando a cor da label para "#17202A"
+  };
+
+  // View
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <TextField
-        label="Sua palavra"
+        sx={textFieldStyle}
+        label="Insira sua palavra"
         variant="outlined"
         focused
-        style={{ width: "500px", color:"white" }}
+        style={{ width: "500px" }}
         onChange={(e) => {
-          SetName(e.target.value);
-          }} 
+          setName(e.target.value);
+        }}
       />
-      <Button variant="contained" onClick={() => { postCategoria();}}>
-        Criar
+      <Button
+        variant="contained"
+        onClick={() => {
+          postCategoria();
+        }}
+        style={buttonStyle}
+      >
+        <span style={buttonLabelStyle}>Criar</span>
       </Button>
     </div>
   );
 }
-
-
-

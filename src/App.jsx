@@ -38,10 +38,10 @@ function App() {
     <div className="App">
       <div style={{ textAlign: "center" }}>
         <h1 style={{ fontSize: "48px", color: "#ffffff", fontWeight: "bold" }}>
-          Vote your word
+          Sua palavra
         </h1>
         <p style={{ fontSize: "18px", color: "#ffffff" }}>
-          Vote your word permite que você escolha uma palavra e vote nela quantas
+          O "Sua palavra" permite que você escolha uma palavra e vote nela quantas
           vezes desejar para que ao fim do dia a sua palavra seja a grande campeã.
         </p>
       </div>
@@ -54,7 +54,7 @@ function App() {
             marginBottom: "40px" // Adiciona espaçamento na parte inferior
           }}
         >
-          Categoria mais votada: {mostVotedCategory.name}
+          Palavra mais votada: {mostVotedCategory.name}
         </h1>
       )}
       <EntradaCategorias />
